@@ -1,8 +1,8 @@
 <?php
 
-$dsn = 'mysql:dbname=php_book_app;host=localhost;charset=utf8mb4';
-$user = 'root';
-$password = '';
+    $dsn = 'mysql:dbname=php_book_app;host=localhost;carset=utf8mb4';
+    $user = 'root';
+    $password = '';
 
 
 //POST操作
@@ -15,7 +15,8 @@ if(isset($_POST['submit'])){
      book_name = :book_name,
      price = :price,
      stock_quantity = :stock_quantity,
-     genre_code = :genre_code
+     genre_code = :genre_code,
+     updated_at = now()
      WHERE id = :id
      ';
 
@@ -110,7 +111,7 @@ if(isset($_GET['id'])){
   <form class='form' acrion="register.php" method="post">
 
   <label>書籍コード</label><br>
-  <input type="text" name="book_name" value="<?= $book['book_code'] ?>" required><br>
+  <input type="number" name="book_name" value="<?= $book['book_code'] ?>" required><br>
 
   <label>書籍名</label><br>
   <input type="text" name="book_name" value="<?= $book['book_name'] ?>" required><br>
@@ -131,9 +132,8 @@ if(isset($_GET['id'])){
    ?>
  
   </select><br>
-  <label>更新日</label><br>
-  <input type="date" name="updated_at" required value="{$book['updated_at']}"><br>
-  <button action="edit.php" method="post" type="submit" name="submit" value="登録">変更</button>
+
+  <button action="edit.php" method="post" type="submit" name="submit" value="変更">変更</button>
  </form>
 
 

@@ -3,9 +3,9 @@
 if(isset($_GET['id'])){
 
   try{
-$dsn = 'mysql:dbname=php_book_app;host=localhost;chrset=utf8mb4';
-$user = 'root';
-$password= '';
+    $dsn = 'mysql:dbname=php_book_app;host=localhost;carset=utf8mb4';
+    $user = 'root';
+    $password = '';
 
 $pdo = new PDO($dsn, $user, $password);
 
