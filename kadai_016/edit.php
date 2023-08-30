@@ -111,7 +111,7 @@ if(isset($_GET['id'])){
   <form class='form' acrion="register.php" method="post">
 
   <label>書籍コード</label><br>
-  <input type="number" name="book_name" value="<?= $book['book_code'] ?>" required><br>
+  <input type="number" name="book_code" value="<?= $book['book_code'] ?>" required><br>
 
   <label>書籍名</label><br>
   <input type="text" name="book_name" value="<?= $book['book_name'] ?>" required><br>
